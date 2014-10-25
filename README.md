@@ -4,10 +4,10 @@
 修改过的内容：<br />
 
 V1.5<br />
-修复 回帖插件添加贴子错误的Bug
-新增 云点赞、猜乐个猜破解插件
-修正 模版错误
-压缩 JS和CSS
+修复 回帖插件添加贴子错误的Bug<br />
+新增 云点赞、猜乐个猜破解插件<br />
+修正 模版错误<br />
+压缩 JS和CSS<br />
 
 V1.4<br />
 替换 favicon.ico(我绝对没盗用qiandao.in的favicon.ico)<br />
