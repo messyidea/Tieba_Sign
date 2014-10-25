@@ -14,7 +14,7 @@ class plugin_xxx_post extends Plugin{
 		if(version_compare(VERSION, '1.14.4.24', '<')) showmessage('签到助手版本过低，请升级');
 	}
 	function page_footer_js() {
-		echo '<script src="plugins/xxx_post/main.js"></script>';
+		echo '<script src="plugins/xxx_post/main.js?version=1.14.6.2"></script>';
 	}
 	function install() {
 		$query = DB::query ( 'SHOW TABLES' );
@@ -253,9 +253,9 @@ EOF;
 				}
 				preg_match ( '/fname="(.+?)"/', $contents, $fnames );
 				$unicode_name = urlencode($fnames [1]);
-				$fname=$fnames [1];
+				$fname = iconv("gbk", "utf-8", $fnames [1]);
 				preg_match ( '/title:"(.*?)"/', $contents, $post_names );
-				$post_name =$post_names [1];
+				$post_name = iconv("gbk", "utf-8", $post_names [1]);
 				DB::insert ( 'xxx_post_posts', array (
 						'uid' => $uid,
 						'fid' => $fid,
