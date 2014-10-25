@@ -3,6 +3,9 @@
 
 修改过的内容：<br />
 
+V1.5<br />
+修复 回帖插件添加贴子错误的Bug
+
 V1.4<br />
 替换 favicon.ico(我绝对没盗用qiandao.in的favicon.ico)<br />
 替换API为http://api.iwch.me/v2/ (SAE云豆不够用，给SAE API关闭了)<br />
