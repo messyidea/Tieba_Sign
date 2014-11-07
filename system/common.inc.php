@@ -43,7 +43,7 @@ if (function_exists('spl_autoload_register')){
 
 require_once SYSTEM_ROOT.'./function/core.php';
 
-// support for sae
+// support for xae
 if(defined('SAE_ACCESSKEY')){
 	define('IN_SAE', true);
 	define('IN_XAE', true);

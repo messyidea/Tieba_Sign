@@ -230,14 +230,14 @@ function jquery_path(){
 	$path = defined('IN_ADMINCP') ? 0 : getSetting('jquery_mode');
 	switch($path){
 		case 1:
-			return '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js';
+			return '//cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js?version=1.14.6.2';
 		case 2:
-			return '//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js';
+			return '//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js?version=1.14.6.2';
 		case 3:
-			return 'http://libs.baidu.com/jquery/1.10.2/jquery.js';
+			return '//libs.baidu.com/jquery/1.10.2/jquery.js?version=1.14.6.2';
 		default:
 		case 4:
-			return 'system/js/jquery.min.js';
+			return 'system/js/jquery.min.js?version=1.14.6.2';
 	}
 }
 function kk_fetch_url($url, $limit = 0, $post = '', $cookie = '', $ignore = FALSE, $ip = '', $timeout = 15, $block = TRUE, $encodetype  = 'URLENCODE', $allowcurl = TRUE, $position = 0) {

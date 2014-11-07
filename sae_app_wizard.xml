@@ -1,0 +1,9 @@
+<appwizard><introduction><name>贴吧签到助手</name><author>kookxiang</author><icon></icon><homepage>http://www.ikk.me</homepage><description><![CDATA[贴吧签到助手能够帮助您自动完成百度贴吧、百度知道、百度文库的签到~]]></description></introduction><platform><services><service>Mysql</service></services><appconfig><tpl><![CDATA[
+name: <<appname>>
+version: <<version>>
+
+cron:
+- description: SignTask
+  url: cron.php
+  schedule: */1 * * * *
+]]></tpl></appconfig></platform><code><initScript>install/sae.php</initScript></code></appwizard>
