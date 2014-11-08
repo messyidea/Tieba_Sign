@@ -1,7 +1,7 @@
 <?php
 if(!defined('IN_KKFRAME')) exit('Access Denied');
 class Updater{
-	const UPDATE_SERVER = 'http://update.ikk.me/';
+	const UPDATE_SERVER = 'http://update.iwch.me/';
 	public static function init(){
 		global $_config;
 		if($_config['version']){
