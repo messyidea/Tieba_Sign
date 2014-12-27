@@ -191,7 +191,11 @@ if(defined('AFENABLED')) echo '<a href="admin.php?action=clear_cron_cache&formha
 #content-updater .filelist ul { margin-top: -5px; padding: 0 15px 10px; background: #efefef; }
 #content-updater .filelist ul li { list-style: disc; line-height: 25px; margin: 0 0 0 25px; }
 </style>
-<p class="copyright"><span class="mobile_hidden">贴吧签到助手 - Designed</span> by <a href="http://www.ikk.me" target="_blank">kookxiang</a> - Modified by <a href="http://www.iwch.me" target="_blank">Wang Chenhao</a>. 2014 &copy; <a href="http://www.kookxiang.com" target="_blank">KK's Laboratory</a> - <a href="http://www.iwch.me/donate" target="_blank">赞助开发</a></p>
+<<<<<<< HEAD
+<p class="copyright"><span class="mobile_hidden">贴吧签到助手 - Designed</span> by <a href="http://www.ikk.me" target="_blank">kookxiang</a> - Modified by <a href="http://www.iwch.me" target="_blank">Wang Chenhao</a>. 2014 &copy; <a href="http://www.kookxiang.com" target="_blank">KK's Laboratory</a> - <a href="http://ikk.me/donate.html" target="_blank">赞助开发</a></p>
+=======
+<p class="copyright"><span class="mobile_hidden">贴吧签到助手 - Designed</span> by <a href="http://www.ikk.me" target="_blank">kookxiang</a> - Modified by <a href="http://www.iwch.me" target="_blank">Wang Chenhao</a>. 2014 &copy; <a href="http://www.kookxiang.com" target="_blank">KK's Laboratory</a> - <a href="http://go.ikk.me/donate" target="_blank">赞助开发</a></p>
+>>>>>>> parent of a8990dd... 赞助链接修改为王晨浩的赞助链接
 </div>
 </div>
 <?php include template('widget/footer'); ?>
