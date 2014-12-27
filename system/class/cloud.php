@@ -3,7 +3,7 @@ if (!defined('IN_KKFRAME')) exit();
 
 class cloud {
 	const API_ROOT = 'http://api.iwch.me/v2/';
-	const API_ROOT_HTTPS = 'http://api.iwch.me/v2/';
+	const API_ROOT_HTTPS = 'https://api.iwch.me/v2/';
     const API_ROOT_SAE = 'http://sae.api.iwch.me/';
 	public static function init(){
 		list($id, $key) = self::_get_id_and_key();
