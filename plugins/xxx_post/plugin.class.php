@@ -224,7 +224,7 @@ EOF;
 				}
 				preg_match ( '/fname="(.+?)"/', $contents, $fnames );
 				$unicode_name = urlencode($fnames [1]);
-				$fname = iconv("gbk", "utf-8", $fnames [1]);
+				$fname = $fnames [1];
 				DB::insert ( 'xxx_post_posts', array (
 					'uid' => $uid,
 					'fid' => $fid,
@@ -244,17 +244,17 @@ EOF;
 				$contents = curl_exec ( $ch );
 				curl_close ( $ch );
 				$fid = 0;
-				preg_match ( '/"forum_id"\s?:\s?(?<fid>\d+)/', $contents, $fids );
+				preg_match ( '/forum_id\:\s\"(?<fid>\d+)\"/', $contents, $fids );
 				$fid =$fids ['fid'];
 				if ($fid == 0) {
 					$data ['msg'] = "添加失败，请检查帖子地址并重试";
 					$data ['msgx'] = 0;
 					break;
 				}
-				preg_match ( '/fname="(.+?)"/', $contents, $fnames );
+				preg_match ( '/fname=\"(.+?)\"/', $contents, $fnames );
 				$unicode_name = urlencode($fnames [1]);
 				$fname=$fnames [1];
-				preg_match ( '/title:"(.*?)"/', $contents, $post_names );
+				preg_match ( '/title:\s\"(.*?)\"/', $contents, $post_names );
 				$post_name =$post_names [1];
 				DB::insert ( 'xxx_post_posts', array (
 						'uid' => $uid,
