@@ -3,6 +3,10 @@
 
 修改过的内容：<br />
 
+V1.6.9<br />
+替换 Zohar代理SMTP发件替换小浩代理SMTP发件，插件版本更新到：v1.0.4<br />
+新增 Zohar Mailer【推荐使用】<br />
+
 V1.6.8<br />
 移除 API停用HTTPS【域名更换NS解析后HTTPS不可用】<br />
 

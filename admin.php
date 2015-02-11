@@ -103,7 +103,7 @@ switch($_GET['action']){
 		if(!defined('AFENABLED')) exit();
 		if($formhash != $_GET['formhash']) showmessage('来源不可信，请重试', 'admin.php#stat');
 		$date = date('Ymd');
-		DB::query("UPDATE sign_log SET status='0', retry='0' WHERE AND date='{$date}' AND status<0");
+		DB::query("UPDATE sign_log SET status='0', retry='0' WHERE date='{$date}' AND status<0");
 		showmessage('已经重置，稍后系统将自动重试', 'admin.php#stat', 1);
 		break;
 	case 'mail_setting':
@@ -164,7 +164,7 @@ switch($_GET['action']){
 	case 'use_sae_api':
 		if($formhash != $_GET['formhash']) showmessage('来源不可信，请重试', 'admin.php#setting');
 		$ret = cloud::request('goto_sae');
-		if(!is_array($ret) || $ret['status']!='ok') showmessage('SAE API仅对部分站点开放，您暂时没有使用权限.', 'admin.php#setting');
+		if(!is_array($ret) || $ret['status']!='ok') showmessage('SAE API 正在封测中，您暂时没有使用权限.', 'admin.php#setting');
 		saveSetting('use_sae_api', true);
 		showmessage('API 地址切换成功.', 'admin.php#setting#');
 	case 'install_plugin':
