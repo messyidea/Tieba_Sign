@@ -21,6 +21,7 @@ if(!defined('IN_ADMINCP')) exit();
 <li id="menu_setting"><a href="#setting">系统设置</a></li>
 <li id="menu_mail"><a href="#mail">邮件群发</a></li>
 <li id="menu_cron"><a href="#cron">计划任务</a></li>
+<li id="menu_updater"><a href="#updater">检查更新</a></li>
 <li><a href="./">返回前台</a></li>
 </ul>
 </div>
@@ -186,11 +187,29 @@ if(defined('AFENABLED')) echo '<a href="admin.php?action=clear_cron_cache&formha
 ?>
 </p>
 </div>
+<div id="content-updater" class="hidden">
 <style type="text/css">
 #content-updater .result { padding: 10px 15px; margin-bottom: 0; background: #efefef; }
 #content-updater .filelist ul { margin-top: -5px; padding: 0 15px 10px; background: #efefef; }
 #content-updater .filelist ul li { list-style: disc; line-height: 25px; margin: 0 0 0 25px; }
 </style>
+<h2>检测升级</h2>
+<p>此功能将联网更新您的贴吧签到助手. 升级过程采用差量升级的方式.</p>
+<p>升级过程需要保证文件被更新的文件可读可写.</p>
+<br>
+<p>如果更新过程出现错误，您可以到 <a href="https://github.com/iwch/Tieba_Sign" target="_blank">https://github.com/iwch/Tieba_Sign</a> 下载最新完整包进行覆盖</p>
+<p>现无法使用下面的方法进行更新，打开<a href="./update/" target="_blank" class="btn red">检查更新</a></p>
+<p>感谢 <a href="http://www.liujiantao.me" rel="nofollow" target="_blank">涛涛</a> 提供自动更新方案</p>
+<br>
+<?php
+if(getSetting('channel') == 'dev'){
+    echo '<p>当前分支：开发版 (<a id="switch_to_stable" href="javascript:;">切换到稳定版</a>)</p>';
+} else {
+    echo '<p>当前分支：稳定版 (<a id="switch_to_dev" href="javascript:;">切换到开发版</a>)</p>';
+}
+?>
+<p>开发版拥有更快的更新速度，但同时也拥有一定的不稳定性.</p>
+</div>
 <p class="copyright"><span class="mobile_hidden">贴吧签到助手 - Designed</span> by <a href="http://ikk.me" rel="nofollow" target="_blank">kookxiang</a> - Modified by <a href="http://www.iwch.me" target="_blank">Zohar</a>. 2014 &copy; <a href="http://www.kookxiang.com" rel="nofollow" target="_blank">KK's Laboratory</a> - <a href="http://go.ikk.me/donate" rel="nofollow" target="_blank">赞助开发</a></p>
 </div>
 </div>
