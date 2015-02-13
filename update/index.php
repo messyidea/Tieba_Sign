@@ -207,7 +207,7 @@ class AutoUpdate {
 }
 $update = new AutoUpdate(true);
 $update->currentVersion = VERSION_NAME; //版本号，整数
-$update->updateUrl = 'http://api.iwch.me/update/'; //更新服务器URL
+$update->updateUrl = 'http://api.iwch.me/update'; //更新服务器URL
 $latest = $update->checkUpdate();
 if ($latest !== false) {
 	if ($latest > $update->currentVersion) {
