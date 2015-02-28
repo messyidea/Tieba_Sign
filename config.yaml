@@ -2,7 +2,7 @@ name: appid
 version: 1
 cron:
 - description: SignTask
-  url: cron.php
+  url: cron.php?pw=password
   schedule: */1 * * * *
 handle:
 - expire: if( path ~ "css" ) time 864000
