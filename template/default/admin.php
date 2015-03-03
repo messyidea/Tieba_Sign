@@ -60,9 +60,9 @@ if(defined('AFENABLED')) echo '<a id="reset_failure_all" href="javascript:;" cla
 <a href="admin.php?action=cloud_sync&formhash=<?php echo $formhash; ?>" class="btn red" onclick="return msg_win_action(this.href)">同步站点信息</a>
 <?php
 if(!getSetting('use_sae_api')){
-	echo '<a href="admin.php?action=use_sae_api&formhash='.$formhash.'" class="btn submit" onclick="return msg_redirect_action(this.href)">切换到 SAE API</a>';
+    echo '<a href="admin.php?action=use_sae_api&formhash='.$formhash.'" class="btn submit" onclick="return msg_redirect_action(this.href)">切换到 SAE API</a>';
 } else {
-	echo '<a href="admin.php?action=use_default_api&formhash='.$formhash.'" class="btn submit" onclick="return msg_redirect_action(this.href)">切换到默认 API</a>';
+    echo '<a href="admin.php?action=use_default_api&formhash='.$formhash.'" class="btn submit" onclick="return msg_redirect_action(this.href)">切换到默认 API</a>';
 }
 ?>
 </p>
@@ -78,9 +78,9 @@ if(!getSetting('use_sae_api')){
 <p><input type="text" id="admin_uid" name="admin_uid" value="<?php echo getSetting('admin_uid'); ?>" /></p>
 <?php } ?>
 <p>功能增强:</p>
-<p><label><input type="checkbox" id="account_switch" name="account_switch" /> 允许多用户切换</label></p>
 <p><label><input type="checkbox" id="random_sign" name="random_sign" /> 使用随机签到模式</label></p>
-<p><label><input type="checkbox" id="multi_thread" name="multi_thread" /> 多线程签到 (不稳定)</label></p>
+<p><label><input type="checkbox" id="multi_thread" name="multi_thread" /> 多线程签到 (Alpha, Nightly version only)</label></p>
+<p><label><input type="checkbox" id="account_switch" name="account_switch" /> 允许多用户切换</label></p>
 <p><label><input type="checkbox" id="autoupdate" name="autoupdate" /> 每天自动更新用户喜欢的贴吧 (稍占服务器资源)</label></p>
 <p>功能限制:</p>
 <?php
@@ -110,7 +110,13 @@ if(defined('AFENABLED')) {
 <p><label><input type="checkbox" id="block_register" name="block_register" /> 彻底关闭新用户注册功能</label></p>
 <p><label><input type="checkbox" id="register_check" name="register_check" /> 启用内置的简单防恶意注册系统 (可能会导致无法注册)</label></p>
 <p><label><input type="checkbox" id="register_limit" name="register_limit" /> 限制并发注册 (开启后可限制注册机注册频率)</label></p>
-<p><input type="text" name="cron_pass" id="cron_pass" placeholder="Cron执行密码 (留空为不需要)" /></p>
+<?php
+if(!defined('SAE_ACCESSKEY')) {
+?>
+<p>CRON执行密码:</p>
+<p><input type="text" name="cron_pass" id="cron_pass" placeholder="cron执行密码 (留空为不需要)" /></p>
+<?php } ?>
+<p>注册邀请码:</p>
 <p><input type="text" name="invite_code" id="invite_code" placeholder="邀请码 (留空为不需要)" /></p>
 <p>jQuery 加载方式:</p>
 <p><label><input type="radio" id="jquery_1" name="jquery_mode" value="1" /> 从 七牛云储存 提供的 CDN 加载 (不支持 SSL)</label></p>
